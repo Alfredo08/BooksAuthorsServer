@@ -17,5 +17,16 @@ public class AuthorsBooksService {
 		this.bookRepository = bookRepository;
 		this.authorRepository = authorRepository;
 	}
-
+	
+	public List<Author> getAllAuthors(){
+		return authorRepository.selectAllAuthors();
+	}
+	
+	public List<Object[]> getBooksAndAuthors(){
+		return bookRepository.selectBooksAndAuthors();
+	}
+	
+	public void addAuthor( String firstname, String lastname ) {
+		authorRepository.insertNewAuthor(firstname, lastname);
+	}
 }

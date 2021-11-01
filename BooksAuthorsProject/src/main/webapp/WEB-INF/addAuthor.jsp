@@ -15,14 +15,22 @@
 				Go back to home
 			</button>
 		</form>
-		<ul>
-			<c:forEach var="author" items="${authorList}">
-				<li>
-					<c:out value="${author.getFirstname()}"></c:out>
-					<c:out value="${author.getLastname()}"></c:out>
-					<c:out value="${author.getAuthor_id()}"></c:out>
-				</li>
-			</c:forEach>
-		</ul>
+		<form method="POST" action="/authors/new">
+			<div>
+				<label for="firstname">
+					First name:
+				</label>
+				<input type="text" id="firstname" name="firstname" />
+			</div>
+				<div>
+				<label for="lastname">
+					Last name:
+				</label>
+				<input type="text" id="lastname" name="lastname" />		
+			</div>
+			<button type="submit">
+				Add author
+			</button>
+		</form>
 	</body>
 </html>

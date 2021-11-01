@@ -16,11 +16,11 @@
 			</button>
 		</form>
 		<ul>
-			<c:forEach var="author" items="${authorList}">
+			<c:forEach var="row" items="${bookList}">
 				<li>
-					<c:out value="${author.getFirstname()}"></c:out>
-					<c:out value="${author.getLastname()}"></c:out>
-					<c:out value="${author.getAuthor_id()}"></c:out>
+					<c:forEach var="column" items="${row}">
+						<c:out value="${column}"></c:out>
+					</c:forEach>
 				</li>
 			</c:forEach>
 		</ul>

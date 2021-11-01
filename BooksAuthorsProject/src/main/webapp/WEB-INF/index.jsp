@@ -28,7 +28,7 @@
 				Display all authors
 			</button>
 		</form>
-		<form method="GET" action="/books">
+		<form method="GET" action="/books/">
 			<button type="submit">
 				Display all books
 			</button>
